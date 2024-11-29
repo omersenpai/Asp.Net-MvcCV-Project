@@ -8,8 +8,6 @@ During the development process, I created a dynamic website using the **Entity F
 
 Through the use of the technologies and approaches in this project, I developed an application that meets all the requirements of a professional CV website. It was a valuable learning experience for both improving my software development knowledge and problem-solving skills.
 
-Special thanks to my mentor, **Murat Yücedağ**, for his guidance.
-
 ## Technologies Used
 
 - **ASP.NET Framework**
