@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "AddExperience";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Add New Experience</h4>
+<br />
+<form class="form-group" method="post">
+    <br />
+    <label>Title</label>
+    <br />
+    <input type="text" name="Baslik" class="form-control" placeholder="Enter Title..." />
+    <br />
+    <label>Subtitle</label>
+    <br />
+    <input type="text" name="AltBaslik" class="form-control" placeholder="Enter Subtitle..." />
+    <br />
+    <label>Description</label>
+    <br />
+    <textarea name="Aciklama" class="form-control" placeholder="Enter Description..."></textarea>
+    <br />
+    <label>Date</label>
+    <br />
+    <input type="text" name="Tarih" class="form-control" placeholder="Enter Date..." />
+    <br />
+    <button class="btn btn-success">Save</button>
+</form>
+

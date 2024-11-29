@@ -1,0 +1,25 @@
+﻿<div class="resume-section-content">
+    <form method="post" action="?submitted=true">
+        <h2 class="mb-5">Contact</h2>
+        <label>Name-Surname</label>
+        <input type="text" class="form-control" name="AdSoyad" />
+        <label>Mail</label>
+        <input type="text" class="form-control" name="Mail" />
+        <label>Topic</label>
+        <input type="text" class="form-control" name="Konu" />
+        <label>Message</label>
+        <textarea class="form-control" name="Mesaj" rows="5"></textarea>
+        <br />
+        <button type="submit" class="btn btn-info">Send Message</button>
+    </form>
+</div>
+
+<script>
+    // Sayfa yüklendiğinde URL'de "submitted=true" parametresi varsa alert göster
+    window.onload = function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('submitted') === 'true') {
+            alert("Message Sent Successfully!");
+        }
+    };
+</script>

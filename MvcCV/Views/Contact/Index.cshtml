@@ -1,0 +1,57 @@
+﻿@using MvcCV.Models.Entity;
+@model List<TblIletisim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- /.col -->
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="tab-pane" id="timeline">
+                                <!-- The timeline -->
+                                <div class="timeline timeline-inverse">
+                                    <!-- timeline time label -->
+                                    @foreach (var item in Model)
+                                    {
+
+                                        <div class="time-label">
+                                            <span class="bg-success">
+                                                @(((DateTime)item.Tarih).ToString("dd-MMM-yyyy"))
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-comments bg-primary"></i>
+                                            <div class="timeline-item">
+                                                <span class="time"><i class="far fa-clock"></i> @item.Mail</span>
+                                                <h3 class="timeline-header"><a href="#">@item.AdSoyad</a> </h3>
+                                                <div class="timeline-body">
+                                                    <label class="text" style="color: slategray">Subject: </label>
+                                                    @item.Konu
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <label class="text" style="color: slategray">Message: </label>
+                                                    @item.Mesaj
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.card-body -->
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+

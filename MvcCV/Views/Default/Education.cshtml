@@ -1,0 +1,18 @@
+﻿@using MvcCV.Models.Entity
+@model List<TblEgitimlerim>
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Education</h2>
+    @foreach (var values in Model)
+    {
+    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+        <div class="flex-grow-1">
+            <h3 class="mb-0">@values.Baslik</h3>
+            <div class="subheading mb-3">@values.AltBaslik1</div>
+            <div>@values.AltBaslik2</div>
+            <p>@values.GNO</p>
+        </div>
+        <div class="flex-shrink-0"><span class="text-primary">@values.Tarih</span></div>
+    </div>
+    }
+</div>

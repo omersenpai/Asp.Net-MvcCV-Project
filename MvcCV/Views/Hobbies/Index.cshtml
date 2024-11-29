@@ -1,0 +1,23 @@
+﻿@using MvcCV.Models.Entity
+@model List<TblHobilerim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Edit Interests</h2>
+<br />
+<form method="post">
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        <input type="hidden" name="[@i].ID" value="@Model[i].ID" />
+
+        <label>Açıklama 1: </label>
+        <textarea rows="5" class="form-control" name="[@i].Aciklama1">@Model[i].Aciklama1</textarea>
+        <label>Açıklama 2: </label>
+        <textarea rows="5" class="form-control" name="[@i].Aciklama2">@Model[i].Aciklama2</textarea>
+        <hr />
+    }
+
+    <button class="btn btn-success">Update</button>
+</form>

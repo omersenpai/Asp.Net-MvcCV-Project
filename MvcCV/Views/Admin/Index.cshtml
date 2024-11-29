@@ -1,0 +1,27 @@
+﻿@using MvcCV.Models.Entity;
+@model List<TblAdmin>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Admin Proccess</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Delete</th>
+        <th>Edit</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.KullaniciAdi</td>
+            <td> <a href="/Admin/DeleteAdmin/@item.ID" class="btn btn-danger">Delete</a></td>
+            <td> <a href="/Admin/BringAdmin/@item.ID" class="btn btn-primary">Edit</a></td>
+        </tr>
+    }
+</table>
+<a href="/Admin/AddAdmin/" class="btn btn-success">Add New User</a>

@@ -1,0 +1,21 @@
+﻿@model MvcCV.Models.Entity.TblAdmin
+@{
+    ViewBag.Title = "BringAdmin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h4>Update Password</h4>
+<br />
+<form class="form-group" method="post">
+    <br />
+    @Html.Label("Admin ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Username")
+    @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control" })
+    <br />
+    @Html.Label("Password Subtitle")
+    @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Update</button>
+</form>
